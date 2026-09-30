@@ -33,6 +33,11 @@
 
 #include <dirent.h>
 
+int __real_access(const char *path, int mode);
+FILE *__real_fopen(const char *path, const char *mode);
+int __real_open(const char *path, int flags, ...);
+DIR *__real_opendir(const char *path);
+
 char patched_fname[512];
 char *patch_fname(char *fname) {
 	if (strstr(fname, "ux0")) {
