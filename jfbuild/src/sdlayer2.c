@@ -306,7 +306,6 @@ int psp2_main(unsigned int argc, void *argv) {
 		return 1;
 	}
 	
-	vglUseVram(GL_TRUE);
 	vglInitExtended(0, 960, 544, 2 * 1024 * 1024, SCE_GXM_MULTISAMPLE_4X);
     
     baselayer_init();
